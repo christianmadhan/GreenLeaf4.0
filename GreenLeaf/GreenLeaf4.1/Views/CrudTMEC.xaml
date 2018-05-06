@@ -75,19 +75,23 @@
             </StackPanel>
             <StackPanel>
                 <TextBlock Text="Description" Foreground="White"/>
-                <TextBox></TextBox>
+                <TextBox Text="{Binding Description, Mode=TwoWay}"  />
             </StackPanel>
             <StackPanel>
                 <TextBlock Text="Date" Foreground="White"/>
-                <DatePicker/>
+                <DatePicker Date="{Binding Date, Mode=TwoWay}" />
             </StackPanel>
             <StackPanel>
                 <TextBlock Text="Pick an Employee" Foreground="White"/>
-                <ComboBox ItemsSource="{Binding emps}">
+                <ComboBox ItemsSource="{Binding emps}" SelectedItem="{Binding SelectedEmployeeComboBox,Mode=TwoWay}">
                 </ComboBox>
             </StackPanel>
+            <StackPanel>
+                <TextBlock Text="Status" Foreground="White"/>
+                <TextBox Text="{Binding Status,Mode=TwoWay}"/>
+            </StackPanel>
             <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal" Margin="0,20,0,0">
-                <Button Height="30" Width="120" Margin="0,0,40,0" Content="Create Task" Foreground="White"/>
+                <Button Height="30" Width="120" Margin="0,0,40,0" Content="Create Task" Foreground="White" Command="{Binding CreateTask}"/>
               
             </StackPanel>
         </StackPanel>
@@ -98,14 +102,14 @@
 
             <StackPanel>
                 <TextBlock Text="Name" Foreground="White"/>
-                <TextBox></TextBox>
+                <TextBox Text="{Binding StationName,Mode=TwoWay}"/>
             </StackPanel>
             <StackPanel>
                 <TextBlock Text="Location" Foreground="White"/>
-                <TextBox></TextBox>
+                <TextBox Text="{Binding Location, Mode=TwoWay}"/>
             </StackPanel>
             <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal" Margin="0,20,0,0">
-                <Button Height="30" Width="130" Margin="0,0,40,0" Content="Create Station" Foreground="White"/>
+                <Button Height="30" Width="130" Margin="0,0,40,0" Content="Create Station" Foreground="White" Command="{Binding CreateStation}"/>
             </StackPanel>
         </StackPanel>
         <StackPanel Grid.Column="1" Grid.Row="1" Margin="10,0,10,0"  Background="ForestGreen">
@@ -114,24 +118,12 @@
                     <TextBlock Text="Comment" FontSize="20" Foreground="White"/>
                 </StackPanel>
                 <StackPanel>
-                    <TextBlock Text="FirstName" Foreground="White"/>
-                    <TextBox></TextBox>
-                </StackPanel>
-                <StackPanel>
-                    <TextBlock Text="FirstName" Foreground="White"/>
-                    <TextBox></TextBox>
-                </StackPanel>
-                <StackPanel>
-                    <TextBlock Text="FirstName" Foreground="White"/>
-                    <TextBox></TextBox>
-                </StackPanel>
-                <StackPanel>
-                    <TextBlock Text="FirstName" Foreground="White"/>
-                    <TextBox></TextBox>
+                    <TextBlock Text="Describtion" Foreground="White"/>
+                    <TextBox Height="100"  TextWrapping="Wrap"
+                             AcceptsReturn="True" Text="{Binding CommentDescription,Mode=TwoWay}"/>
                 </StackPanel>
                 <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal" Margin="0,20,0,0">
-                    <Button Height="30" Width="100" Margin="0,0,40,0" Content="Create Employee" Foreground="White"/>
-                    <Button Height="30" Width="200" Content="Generate Username" Foreground="White"/>
+                    <Button Height="30" Width="120" Margin="0,0,40,0" Content="Add Comment" Command="{Binding CreateComment}" Foreground="White"/>
                 </StackPanel>
             </StackPanel>
         </StackPanel>

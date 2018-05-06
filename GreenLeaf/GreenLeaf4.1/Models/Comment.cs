@@ -20,6 +20,9 @@ namespace GreenLeaf4._1.Models
             _stationID = stationID;
         }
 
+        // Empty constructer for Singleton
+        public Comment() { }
+
         public int CommentID
         {
             get { return _commentID; }

@@ -26,6 +26,8 @@ namespace GreenLeaf4._1.Models
             _stationID = stationID;
         }
 
+        public CTask() { }
+
         public int TaskID
         {
             get { return _taskID; }

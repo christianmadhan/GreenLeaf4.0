@@ -24,9 +24,6 @@ namespace GreenLeaf4._1.ViewModels
         public static int Number = 0;
 
         SingletonStation _StationSingleton = SingletonStation.GetInstance();
-        SingletonListOfComments Comments = SingletonListOfComments.GetInstance();
-        SingletonListOfMonitors Monitors = SingletonListOfMonitors.GetInstance();
-        SingletonListOfTasks Tasks = SingletonListOfTasks.GetInstance();
 
         public RelayCommand GoToCrudPage { get; set; }
 
@@ -61,19 +58,28 @@ namespace GreenLeaf4._1.ViewModels
 
         public async void DoGoToCrudPage()
         {
-            CoreApplicationView newView = CoreApplication.CreateNewView();
-            int newViewId = 0;
-            await newView.Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () =>
+            _StationSingleton.SetStation(Selected);
+            if (Selected == null)
             {
-                Frame frame = new Frame();
-                frame.Navigate(typeof(CrudTMEC), null);
-                Window.Current.Content = frame;
-                // You have to activate the window in order to show it later.
-                Window.Current.Activate();
+                    MessageDialog msg = new MessageDialog("You have to pick a Station");
+                    await msg.ShowAsync();
+            }
+            else
+            {
+                CoreApplicationView newView = CoreApplication.CreateNewView();
+                int newViewId = 0;
+                await newView.Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () =>
+                {
+                    Frame frame = new Frame();
+                    frame.Navigate(typeof(CrudTMEC), null);
+                    Window.Current.Content = frame;
+                    // You have to activate the window in order to show it later.
+                    Window.Current.Activate();
 
-                newViewId = ApplicationView.GetForCurrentView().Id;
-            });
-            bool viewShown = await ApplicationViewSwitcher.TryShowAsStandaloneAsync(newViewId);
+                    newViewId = ApplicationView.GetForCurrentView().Id;
+                });
+                bool viewShown = await ApplicationViewSwitcher.TryShowAsStandaloneAsync(newViewId);
+            }
         }
 
 

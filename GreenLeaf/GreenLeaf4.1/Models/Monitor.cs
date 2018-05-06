@@ -24,6 +24,9 @@ namespace GreenLeaf4._1.Models
             _stationID = stationID;
         }
 
+        // Empty Constructer for singleton
+        public Monitor() { }
+
         public int MonitorID
         {
             get { return _monitorID; }

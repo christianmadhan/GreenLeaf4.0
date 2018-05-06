@@ -114,11 +114,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Activation\ActivationHandler.cs" />
+    <Compile Include="Global\SingletonEmployee.cs" />
     <Compile Include="Global\SingletonListOfComments.cs" />
     <Compile Include="Global\SingletonListOfEmployees.cs" />
     <Compile Include="Global\SingletonListOfMonitors.cs" />
     <Compile Include="Global\SingletonListOfStations.cs" />
     <Compile Include="Global\SingletonListOfTasks.cs" />
+    <Compile Include="Global\SingletonStation.cs" />
     <Compile Include="Helpers\EnumToBooleanConverter.cs" />
     <Compile Include="Helpers\Json.cs" />
     <Compile Include="Helpers\NavHelper.cs" />
@@ -143,6 +145,7 @@
     <Compile Include="Services\ThemeSelectorService.cs" />
     <Compile Include="Services\WebApiService.cs" />
     <Compile Include="ViewModels\CommentsViewModel.cs" />
+    <Compile Include="ViewModels\CRUDViewModel.cs" />
     <Compile Include="ViewModels\EmployeesViewModel.cs" />
     <Compile Include="ViewModels\GreenLeafViewModel.cs" />
     <Compile Include="ViewModels\MonitorsViewModel.cs" />
@@ -152,6 +155,9 @@
     <Compile Include="ViewModels\TasksViewModel.cs" />
     <Compile Include="Views\CommentsPage.xaml.cs">
       <DependentUpon>CommentsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CrudTMEC.xaml.cs">
+      <DependentUpon>CrudTMEC.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\EmployeesDetailControl.xaml.cs">
       <DependentUpon>EmployeesDetailControl.xaml</DependentUpon>
@@ -212,6 +218,10 @@
     <Page Include="Views\CommentsPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\CrudTMEC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\EmployeesDetailControl.xaml">
       <Generator>MSBuild:Compile</Generator>

@@ -20,6 +20,8 @@ namespace GreenLeaf4._1.Models
             _location = location;
         }
 
+        public Station() { }
+
         public int StationID
         {
             get { return _stationID; }

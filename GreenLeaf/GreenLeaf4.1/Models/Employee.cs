@@ -24,6 +24,9 @@ namespace GreenLeaf4._1.Models
             _passWord = password;
         }
 
+        // Empty Constructer used for singleton
+        public Employee() { }
+
         public int EmpID
         {
             get { return _empID; }
@@ -52,6 +55,11 @@ namespace GreenLeaf4._1.Models
         {
             get { return _passWord; }
             set { _passWord = value; OnPropertyChanged(nameof(Password)); }
+        }
+
+        public override string ToString()
+        {
+            return Firstname;
         }
     }
 }

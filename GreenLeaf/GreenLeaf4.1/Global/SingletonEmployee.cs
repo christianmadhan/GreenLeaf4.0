@@ -7,7 +7,7 @@ using GreenLeaf4._1.Models;
 
 namespace GreenLeaf4._1.Global
 {
-  public  class SingletonEmployee
+  public  class SingletonEmployee 
   {
       public static Employee _Employee;
 

@@ -5,6 +5,7 @@ using GreenLeaf4._1.Services;
 using Windows.ApplicationModel.Activation;
 using Windows.UI.Xaml;
 using GreenLeaf4._1.Global;
+using GreenLeaf4._1.Views;
 
 namespace GreenLeaf4._1
 {
@@ -23,11 +24,12 @@ namespace GreenLeaf4._1
 
             SingletonListOfComments CommentSingle = SingletonListOfComments.GetInstance();
             SingletonListOfEmployees EmployeeSingle = SingletonListOfEmployees.GetInstance();
-            SingletonListOfMonitors MonitorSingle  = SingletonListOfMonitors.GetInstance();
+            SingletonListOfMonitors MonitorSingle = SingletonListOfMonitors.GetInstance();
             SingletonListOfStations StationSingle = SingletonListOfStations.GetInstance();
             SingletonListOfTasks TaskSingle = SingletonListOfTasks.GetInstance();
-           
-            _activationService = new Lazy<ActivationService>(CreateActivationService);
+
+            //_activationService = new Lazy<ActivationService>(CreateActivationService);
+            _activationService = new Lazy<ActivationService>(CreateLogin);
         }
 
         protected override async void OnLaunched(LaunchActivatedEventArgs args)
@@ -43,14 +45,10 @@ namespace GreenLeaf4._1
             await ActivationService.ActivateAsync(args);
         }
 
-        private ActivationService CreateActivationService()
+        private ActivationService CreateLogin()
         {
-            return new ActivationService(this, typeof(Views.GreenLeafPage), new Lazy<UIElement>(CreateShell));
+            return new ActivationService(this,typeof(Login));
         }
 
-        private UIElement CreateShell()
-        {
-            return new Views.ShellPage();
-        }
     }
 }

@@ -7,7 +7,7 @@ using GreenLeaf4._1.Helpers;
 
 namespace GreenLeaf4._1.Models
 {
-    public class Station : NotifyChanged
+    public class Station : Observable
     {
         private int _stationID;
         private string _name;

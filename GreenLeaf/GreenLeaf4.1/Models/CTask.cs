@@ -7,7 +7,7 @@ using GreenLeaf4._1.Helpers;
 
 namespace GreenLeaf4._1.Models
 {
-    public class CTask : NotifyChanged
+    public class CTask : Observable
     {
         private int _taskID;
         private string _description;

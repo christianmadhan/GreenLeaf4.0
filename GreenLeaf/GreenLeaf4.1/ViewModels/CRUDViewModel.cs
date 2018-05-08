@@ -15,7 +15,7 @@ using GreenLeaf4._1.Views;
 
 namespace GreenLeaf4._1.ViewModels
 {
-    public class CRUDViewModel : NotifyChanged
+    public class CRUDViewModel : Observable
     {
         // New Station
         public string StationName { get; set; }

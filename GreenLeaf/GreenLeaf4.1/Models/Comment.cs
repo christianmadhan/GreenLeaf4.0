@@ -7,7 +7,7 @@ using GreenLeaf4._1.Helpers;
 
 namespace GreenLeaf4._1.Models
 {
-    public class Comment : NotifyChanged
+    public class Comment : Observable
     {
         private int _commentID;
         private string _description;

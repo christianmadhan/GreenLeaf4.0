@@ -7,7 +7,7 @@ using GreenLeaf4._1.Helpers;
 
 namespace GreenLeaf4._1.Models
 {
-    public class Employee : NotifyChanged
+    public class Employee : Observable
     {
         private int _empID;
         private string _firstName;

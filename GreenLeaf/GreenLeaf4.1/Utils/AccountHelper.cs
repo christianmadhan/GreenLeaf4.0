@@ -12,6 +12,7 @@ namespace GreenLeaf4._1.Utils
     class AccountHelper
     {
         private static SingletonListOfEmployees Instance = SingletonListOfEmployees.GetInstance();
+        private static SingletonEmployee singleEmp = SingletonEmployee.GetInstance();
 
         public static ObservableCollection<Employee> LoadAccountList()
         {
@@ -24,6 +25,7 @@ namespace GreenLeaf4._1.Utils
             {
                 if (emp.Username.Equals(username) && emp.Password.Equals(password))
                 {
+                    singleEmp.SetEmployee(emp);
                     return true;
                 }
             }

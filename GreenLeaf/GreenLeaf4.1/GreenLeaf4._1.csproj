@@ -121,6 +121,7 @@
     <Compile Include="Global\SingletonListOfStations.cs" />
     <Compile Include="Global\SingletonListOfTasks.cs" />
     <Compile Include="Global\SingletonStation.cs" />
+    <Compile Include="Global\SingletonTask.cs" />
     <Compile Include="Helpers\EnumToBooleanConverter.cs" />
     <Compile Include="Helpers\Json.cs" />
     <Compile Include="Helpers\NavHelper.cs" />
@@ -153,6 +154,7 @@
     <Compile Include="ViewModels\ShellViewModel.cs" />
     <Compile Include="ViewModels\StationsViewModel.cs" />
     <Compile Include="ViewModels\TasksViewModel.cs" />
+    <Compile Include="ViewModels\UpdatedViewModel.cs" />
     <Compile Include="Views\CommentsPage.xaml.cs">
       <DependentUpon>CommentsPage.xaml</DependentUpon>
     </Compile>
@@ -185,6 +187,9 @@
     </Compile>
     <Compile Include="Views\TasksPage.xaml.cs">
       <DependentUpon>TasksPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UpdateStatus.xaml.cs">
+      <DependentUpon>UpdateStatus.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -261,6 +266,10 @@
     <Page Include="Views\TasksPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UpdateStatus.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>

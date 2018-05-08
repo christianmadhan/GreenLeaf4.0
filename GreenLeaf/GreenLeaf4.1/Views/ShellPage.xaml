@@ -15,7 +15,7 @@
         SelectedItem="{x:Bind ViewModel.Selected, Mode=OneWay}"
         Header="{x:Bind ViewModel.Selected.Content, Mode=OneWay}"
         IsSettingsVisible="True"
-        Background="#3df740">
+        Background="#076a01">
         <NavigationView.MenuItems>
 
             <NavigationViewItem x:Uid="Shell_GreenLeaf" Icon="Home" helpers:NavHelper.NavigateTo="views:GreenLeafPage" />

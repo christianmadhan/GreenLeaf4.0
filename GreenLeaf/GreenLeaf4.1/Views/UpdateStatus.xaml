@@ -10,6 +10,9 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="../Assets/updateBackground.jpg"></ImageBrush>
+        </Grid.Background>
         <Grid.DataContext>
             <viewModels:UpdatedViewModel/>
         </Grid.DataContext>
@@ -36,6 +39,9 @@
                 <StackPanel Margin="0,10,0,0">
                     <TextBlock Text="Status" />
                     <TextBox Height="50" Width="350" Text="{Binding Status, Mode=TwoWay}"/>
+                </StackPanel>
+                <StackPanel Margin="0,10,0,0" HorizontalAlignment="Center">
+                    <Button Content="Update Status" Background="Chartreuse" Command="{Binding UpdateStatus}"/>
                 </StackPanel>
             </StackPanel>
         </StackPanel>

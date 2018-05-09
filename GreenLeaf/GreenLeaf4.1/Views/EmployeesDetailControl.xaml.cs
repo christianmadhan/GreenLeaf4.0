@@ -66,20 +66,6 @@ namespace GreenLeaf4._1.Views
             }
         }
 
-        protected void Set<T>(ref T storage, T value, [CallerMemberName] string propertyName = null)
-        {
-            if (Equals(storage, value))
-            {
-                return;
-            }
-
-            storage = value;
-            OnPropertyChanged(propertyName);
-        }
-
-        protected void OnPropertyChanged(string propertyName) =>
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-
         private async void GoToUpDateStatusPage(object sender, RoutedEventArgs e)
         {
             singleTask.SetTask(Selected);
@@ -105,5 +91,18 @@ namespace GreenLeaf4._1.Views
                 bool viewShown = await ApplicationViewSwitcher.TryShowAsStandaloneAsync(newViewId);
             }
         }
+        private void Set<T>(ref T storage, T value, [CallerMemberName] string propertyName = null)
+        {
+            if (Equals(storage, value))
+            {
+                return;
+            }
+
+            storage = value;
+            OnPropertyChanged(propertyName);
+        }
+
+        private void OnPropertyChanged(string propertyName) =>
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
     }
 }

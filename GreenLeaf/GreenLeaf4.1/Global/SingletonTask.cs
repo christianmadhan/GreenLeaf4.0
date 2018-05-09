@@ -32,6 +32,11 @@ namespace GreenLeaf4._1.Global
             _Task = task;
         }
 
+        public void SetStatus(string status)
+        {
+            _Task.Status = status;
+        }
+
 
         public int GetTaskID()
         {
@@ -46,6 +51,21 @@ namespace GreenLeaf4._1.Global
         public string GetStatus()
         {
             return _Task.Status;
+        }
+
+        public string GetDate()
+        {
+            return _Task.Date;
+        }
+
+        public int GetStationID()
+        {
+            return _Task.StationID;
+        }
+
+        public int GetEmpID()
+        {
+            return _Task.EmpID;
         }
     }
 }

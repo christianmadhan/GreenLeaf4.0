@@ -62,5 +62,30 @@ namespace GreenLeaf4._1.Services
                 }
             }
         }
+
+        // Method to Delete Task, Monitor, Employee, Comment, Station
+        public static async Task<string> DeleteObjectAsync(string url)
+        {
+            HttpClientHandler handler = new HttpClientHandler() { UseDefaultCredentials = true };
+            using (var client = new HttpClient(handler))
+            {
+                client.BaseAddress = new Uri(ServerUrl);
+                client.DefaultRequestHeaders.Clear();
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                try
+                {
+                    HttpResponseMessage responseMessage = await client.DeleteAsync(url);
+                    if (responseMessage.IsSuccessStatusCode) await responseMessage.Content.ReadAsStringAsync();
+                    return null;
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.Message);
+                    return null;
+                }
+            }
+        }
+
+
     }
 }

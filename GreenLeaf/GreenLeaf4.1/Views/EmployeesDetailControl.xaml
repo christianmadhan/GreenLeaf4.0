@@ -31,8 +31,8 @@
                 <TextBlock Text="{x:Bind MasterMenuItem.Username, Mode=OneWay}" Style="{StaticResource BodyTextBlockStyle}" />
                 <TextBlock Text="Password" Style="{StaticResource SubtitleTextBlockStyle}" Margin="0,8,0,0"/>
                 <TextBlock Text="{x:Bind MasterMenuItem.Password, Mode=OneWay}" Style="{StaticResource BodyTextBlockStyle}" />
-
-                <StackPanel>
+               <TextBlock Text="Task List: "></TextBlock>
+                <StackPanel Margin="0,10,0,0">
                     <ListView  
                     ItemsSource="{x:Bind TaskSample}"
                     SelectedItem="{x:Bind Selected, Mode=TwoWay}"
@@ -40,7 +40,7 @@
                         <ListView.ItemTemplate>
                             <DataTemplate  >
                                 <StackPanel >
-                                    <StackPanel Orientation="Horizontal" Margin="0,0,10,10" Height="150" Width="130">
+                                    <StackPanel Orientation="Horizontal" Margin="0,0,10,10" Height="150" Width="220">
                                         <StackPanel>
                                             <StackPanel Orientation="Horizontal">
                                                 <TextBlock Text="Emp ID: " Style="{StaticResource BodyTextBlockStyle}"/>
@@ -71,7 +71,7 @@
                             </ItemsPanelTemplate>
                         </ListView.ItemsPanel>
                     </ListView>
-                    <Button Content="Update Status" Click="GoToUpDateStatusPage"/>
+                    <Button Content="Update Status" Click="GoToUpDateStatusPage" HorizontalAlignment="Center" />
                 </StackPanel>
             </StackPanel>
         </StackPanel>

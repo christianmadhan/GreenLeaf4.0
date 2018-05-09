@@ -11,7 +11,7 @@
 
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="../Assets/updateBackground.jpg"></ImageBrush>
+            <ImageBrush ImageSource="../Assets/Tree.jpg"></ImageBrush>
         </Grid.Background>
         <Grid.DataContext>
             <viewModels:UpdatedViewModel/>
@@ -28,7 +28,7 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <StackPanel Grid.Column="1" Grid.Row="1" Background="#076a01">
+        <StackPanel Grid.Column="1" Grid.Row="1" Background="#076a01" CornerRadius="4,4,4,4">
             <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
                 <TextBlock Text="Task Id:" />
                 <TextBlock Text="{Binding TaskID,Mode=TwoWay}"/>

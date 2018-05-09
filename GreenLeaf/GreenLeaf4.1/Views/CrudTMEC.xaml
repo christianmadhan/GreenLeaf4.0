@@ -8,7 +8,10 @@
     xmlns:viewModels="using:GreenLeaf4._1.ViewModels"
     mc:Ignorable="d">
 
-    <Grid Background="White">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="../Assets/Tree.jpg"></ImageBrush>
+        </Grid.Background>
             <Grid.ColumnDefinitions>
             <ColumnDefinition/>
                 <ColumnDefinition/>
@@ -24,95 +27,95 @@
         </Grid.DataContext>
 
 
-        <StackPanel Grid.Column="0" Grid.Row="0" Margin="10,0,0,0" Background="ForestGreen">
+        <StackPanel Grid.Column="0" Grid.Row="0" Margin="10,0,0,0" Background="ForestGreen" Height="320" CornerRadius="3,3,3,3" Width="400">
             <StackPanel HorizontalAlignment="Center">
                 <TextBlock Text="Employee" FontSize="20" Foreground="White"/>
             </StackPanel>
             <StackPanel>
-                <TextBlock Text="FirstName" Foreground="White"/>
-                <TextBox Text="{Binding FirstName, Mode=TwoWay}"/>
+                <TextBlock Text="FirstName" Foreground="White" Margin="7,0,0,0"/>
+                <TextBox Text="{Binding FirstName, Mode=TwoWay}" HorizontalAlignment="Left" Width="302" Margin="7,0,0,0"/>
             </StackPanel>
             <StackPanel>
-                <TextBlock Text="LastName" Foreground="White"/>
-                <TextBox Text="{Binding LastName, Mode=TwoWay}"/>
+                <TextBlock Text="LastName" Foreground="White" Margin="7,0,0,0"/>
+                <TextBox Text="{Binding LastName, Mode=TwoWay}" HorizontalAlignment="Left" Width="302" Margin="7,0,0,0"/>
             </StackPanel>
             <StackPanel>
-                <TextBlock Text="Username" Foreground="White"/>
-                <TextBox Text="{Binding UserName, Mode=TwoWay}"/>
+                <TextBlock Text="Username" Foreground="White" Margin="7,0,0,0"/>
+                <TextBox Text="{Binding UserName, Mode=TwoWay}" HorizontalAlignment="Left" Width="302" Margin="7,0,0,0"/>
             </StackPanel>
             <StackPanel>
-                <TextBlock Text="Password" Foreground="White"/>
-                <PasswordBox Password="{Binding PassWord, Mode=TwoWay}"/>
-                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal" Margin="0,20,0,0">
+                <TextBlock Text="Password" Foreground="White" Margin="7,0,0,0"/>
+                <PasswordBox Password="{Binding PassWord, Mode=TwoWay}" HorizontalAlignment="Left" Width="302" Margin="7,0,0,0"/>
+                <StackPanel HorizontalAlignment="Left" VerticalAlignment="Center" Orientation="Horizontal" Margin="10,20,0,0" >
                     <Button Height="30" Width="140" Margin="0,0,30,0" Content="Create Employee" Foreground="White" Command="{Binding CreateEmployee}"/>
                     <Button Height="30" Width="200" Content="Generate Username" Foreground="White" Command="{Binding GenerateUsername}"/>
                 </StackPanel>
             </StackPanel>
         </StackPanel>
-        <StackPanel Grid.Column="1" Margin="10,0,10,0"  Background="ForestGreen">
+        <StackPanel Grid.Column="1" Margin="10,0,10,0"  Background="ForestGreen"  Height="320" CornerRadius="3,3,3,3" Width="400">
             <StackPanel HorizontalAlignment="Center">
                 <TextBlock Text="Monitor" FontSize="20" Foreground="White"/>
             </StackPanel>
             <StackPanel>
-                <TextBlock Text="Name" Foreground="White"/>
-                <TextBox></TextBox>
+                <TextBlock Text="Name" Foreground="White"  Margin="7,0,0,0"/>
+                <TextBox HorizontalAlignment="Left" Width="302" Margin="7,0,0,0"/>
             </StackPanel>
             <StackPanel>
-                <TextBlock Text="Particle" Foreground="White"/>
-                <TextBox></TextBox>
+                <TextBlock Text="Particle" Foreground="White"  Margin="7,0,0,0"/>
+                <TextBox HorizontalAlignment="Left" Width="302" Margin="7,0,0,0"/>
             </StackPanel>
             <StackPanel>
-                <TextBlock Text="Equipment" Foreground="White"/>
-                <TextBox></TextBox>
+                <TextBlock Text="Equipment" Foreground="White" Margin="7,0,0,0"/>
+                <TextBox HorizontalAlignment="Left" Width="302" Margin="7,0,0,0"/>
             </StackPanel>
             <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal" Margin="0,20,0,0">
                 <Button Height="30" Width="130" Margin="0,0,40,0" Content="Create Monitor" Foreground="White"/>
             </StackPanel>
         </StackPanel>
-        <StackPanel Grid.Column="2" Grid.RowSpan="2" Margin="0,0,10,0"  Background="ForestGreen">
+        <StackPanel Grid.Column="2" Grid.RowSpan="2" Margin="0,0,10,0"  Background="ForestGreen"  Height="320" CornerRadius="3,3,3,3" Width="400">
             <StackPanel HorizontalAlignment="Center">
                 <TextBlock Text="Task" FontSize="20" Foreground="White"/>
             </StackPanel>
             <StackPanel>
-                <TextBlock Text="Description" Foreground="White"/>
-                <TextBox Text="{Binding Description, Mode=TwoWay}"  />
+                <TextBlock Text="Description" Foreground="White"  Margin="7,0,0,0"/>
+                <TextBox Text="{Binding Description, Mode=TwoWay}" HorizontalAlignment="Left" Width="302" Margin="7,0,0,0"  />
             </StackPanel>
             <StackPanel>
-                <TextBlock Text="Date" Foreground="White"/>
-                <DatePicker Date="{Binding Date, Mode=TwoWay}" />
+                <TextBlock Text="Date" Foreground="White"  Margin="7,0,0,0"/>
+                <DatePicker Date="{Binding Date, Mode=TwoWay}"  Margin="7,0,0,0" />
             </StackPanel>
             <StackPanel>
-                <TextBlock Text="Pick an Employee" Foreground="White"/>
-                <ComboBox ItemsSource="{Binding emps}" SelectedItem="{Binding SelectedEmployeeComboBox,Mode=TwoWay}">
+                <TextBlock Text="Pick an Employee" Foreground="White"  Margin="7,0,0,0"/>
+                <ComboBox ItemsSource="{Binding emps}" SelectedItem="{Binding SelectedEmployeeComboBox,Mode=TwoWay}"  Margin="7,0,0,0">
                 </ComboBox>
             </StackPanel>
             <StackPanel>
-                <TextBlock Text="Status" Foreground="White"/>
-                <TextBox Text="{Binding Status,Mode=TwoWay}"/>
+                <TextBlock Text="Status" Foreground="White"  Margin="7,0,0,0"/>
+                <TextBox Text="{Binding Status,Mode=TwoWay}" HorizontalAlignment="Left" Width="302" Margin="7,0,0,0"/>
             </StackPanel>
             <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal" Margin="0,20,0,0">
                 <Button Height="30" Width="120" Margin="0,0,40,0" Content="Create Task" Foreground="White" Command="{Binding CreateTask}"/>
               
             </StackPanel>
         </StackPanel>
-        <StackPanel Grid.Column="0" Grid.Row="1" Margin="10,0,0,0" Background="ForestGreen">
+        <StackPanel Grid.Column="0" Grid.Row="1" Margin="10,0,0,0" Background="ForestGreen"  Height="320" CornerRadius="3,3,3,3" Width="400">
             <StackPanel HorizontalAlignment="Center">
                 <TextBlock Text="Station" FontSize="20" Foreground="White"/>
             </StackPanel>
 
             <StackPanel>
-                <TextBlock Text="Name" Foreground="White"/>
-                <TextBox Text="{Binding StationName,Mode=TwoWay}"/>
+                <TextBlock Text="Name" Foreground="White" Margin="7,0,0,0"/>
+                <TextBox Text="{Binding StationName,Mode=TwoWay}" HorizontalAlignment="Left" Width="302" Margin="7,0,0,0" />
             </StackPanel>
             <StackPanel>
-                <TextBlock Text="Location" Foreground="White"/>
-                <TextBox Text="{Binding Location, Mode=TwoWay}"/>
+                <TextBlock Text="Location" Foreground="White" Margin="7,0,0,0"/>
+                <TextBox Text="{Binding Location, Mode=TwoWay}" HorizontalAlignment="Left" Width="302" Margin="7,0,0,0"/>
             </StackPanel>
             <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal" Margin="0,20,0,0">
                 <Button Height="30" Width="130" Margin="0,0,40,0" Content="Create Station" Foreground="White" Command="{Binding CreateStation}"/>
             </StackPanel>
         </StackPanel>
-        <StackPanel Grid.Column="1" Grid.Row="1" Margin="10,0,10,0"  Background="ForestGreen">
+        <StackPanel Grid.Column="1" Grid.Row="1" Margin="10,0,10,0"  Background="ForestGreen"  Height="320" CornerRadius="3,3,3,3" Width="400">
             <StackPanel Margin="3,3,3,3">
                 <StackPanel HorizontalAlignment="Center">
                     <TextBlock Text="Comment" FontSize="20" Foreground="White"/>

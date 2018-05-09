@@ -71,7 +71,7 @@ namespace GreenLeaf4._1.Views
             singleTask.SetTask(Selected);
             if (Selected == null)
             {
-                MessageDialog msg = new MessageDialog("You have to pick a Station");
+                MessageDialog msg = new MessageDialog("You have to pick a Task");
                 await msg.ShowAsync();
             }
             else

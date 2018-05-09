@@ -89,6 +89,7 @@ namespace GreenLeaf4._1.ViewModels
             newComment = new Comment();
             newStation = new Station();
             LoadDataIntoLists();
+            Date = DateTime.Today;
 
             GenerateUsername = new RelayCommand(DoGenerateUsername);
             CreateEmployee = new RelayCommand(DoCreateEmployee);

@@ -20,18 +20,21 @@
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
-        <Image Source="../Assets/GreenLeafLogo.png" Grid.Column="1"/>
-        <StackPanel Orientation="Vertical" Grid.Column="1" Grid.Row="1" Background="#076a01" CornerRadius="5,5,5,5">
+        <Grid.Background>
+            <ImageBrush ImageSource="../Assets/leafpic2.jpg"></ImageBrush>
+        </Grid.Background>
+        <!--<Image Source="../Assets/GreenLeafLogo.png" Grid.Column="1"/>-->
+        <StackPanel Orientation="Vertical" Grid.Column="1" Grid.Row="1"  CornerRadius="5,5,5,5">
            
             <TextBlock x:Name="ErrorMessage" Text="" FontSize="20" Margin="4" Foreground="Red" TextAlignment="Center"/>
             <TextBlock Text="Username" Margin="0,0,0,20"
                        TextWrapping="Wrap" Width="300"
-                       TextAlignment="Center" VerticalAlignment="Center" FontSize="16" Foreground="WhiteSmoke"/>
+                       TextAlignment="Center" VerticalAlignment="Center" FontSize="16" Foreground="DarkGreen"/>
             <TextBox x:Name="UsernameTextBox" Margin="4" Width="250"/>
           
             <TextBlock Text="Password" Margin="0,0,0,20"
                        TextWrapping="Wrap" Width="300"
-                       TextAlignment="Center" VerticalAlignment="Center" FontSize="16" Foreground="WhiteSmoke"/>
+                       TextAlignment="Center" VerticalAlignment="Center" FontSize="16" Foreground="DarkGreen"/>
             <PasswordBox x:Name="passBox" Margin="4" Width="250"/>
             <Button x:Name="PassportSignInButton" Content="Login" Background="DarkGreen" Foreground="White"
                     Click="PassportSignInButton_Click" Width="80" HorizontalAlignment="Center" Margin="0,20"/>

@@ -10,14 +10,17 @@
     xmlns:i="using:Microsoft.Xaml.Interactivity"
     mc:Ignorable="d">
 
-    <NavigationView
+    <NavigationView        
         x:Name="navigationView"
         SelectedItem="{x:Bind ViewModel.Selected, Mode=OneWay}"
         Header="{x:Bind ViewModel.Selected.Content, Mode=OneWay}"
-        IsSettingsVisible="True"
-        Background="#076a01">
-        <NavigationView.MenuItems>
+        IsSettingsVisible="True">
+        <NavigationView.Background>
+            <ImageBrush ImageSource="ms-appx:///Assets/Green Windmill.jpg"/>
+        </NavigationView.Background>
 
+
+        <NavigationView.MenuItems>
             <NavigationViewItem x:Uid="Shell_GreenLeaf" Icon="Home" helpers:NavHelper.NavigateTo="views:GreenLeafPage" />
             <NavigationViewItem x:Uid="Shell_Stations" Icon="Map" helpers:NavHelper.NavigateTo="views:StationsPage" />
             <NavigationViewItem x:Uid="Shell_Employees" Icon="Contact" helpers:NavHelper.NavigateTo="views:EmployeesPage" />
@@ -32,6 +35,7 @@
                     Margin="12,0,0,0"
                     VerticalAlignment="Center"
                     Text="{Binding}" />
+
             </DataTemplate>
         </NavigationView.HeaderTemplate>
         <i:Interaction.Behaviors>
@@ -43,4 +47,5 @@
             <Frame x:Name="shellFrame" />
         </Grid>
     </NavigationView>
+
 </Page>

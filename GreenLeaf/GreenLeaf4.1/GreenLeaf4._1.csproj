@@ -122,6 +122,7 @@
     <Compile Include="Global\SingletonListOfTasks.cs" />
     <Compile Include="Global\SingletonStation.cs" />
     <Compile Include="Global\SingletonTask.cs" />
+    <Compile Include="Helpers\DateTimeConverter.cs" />
     <Compile Include="Helpers\EnumToBooleanConverter.cs" />
     <Compile Include="Helpers\Json.cs" />
     <Compile Include="Helpers\NavHelper.cs" />

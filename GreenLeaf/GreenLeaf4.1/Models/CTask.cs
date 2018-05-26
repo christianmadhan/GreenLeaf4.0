@@ -42,7 +42,7 @@ namespace GreenLeaf4._1.Models
 
         public string Date
         {
-            get { return _date; }
+            get => _date;
             set { _date = value; OnPropertyChanged(nameof(Date)); }
         }
 

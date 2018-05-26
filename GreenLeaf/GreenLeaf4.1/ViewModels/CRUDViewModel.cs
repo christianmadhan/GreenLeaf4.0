@@ -153,7 +153,7 @@ namespace GreenLeaf4._1.ViewModels
             tasklist.GetTaskList().GroupBy(x => x.TaskID);
             newTask.TaskID = tasklist.GetTaskList().Last().TaskID + 1;
             newTask.Description = Description;
-            newTask.Date = Date.Date.ToShortDateString();
+            newTask.Date = Date.ToString();
             newTask.Status = Status;
             newTask.EmpID = SelectedEmployeeComboBox.EmpID;
             newTask.StationID = station.GetStationID();

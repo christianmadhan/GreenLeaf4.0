@@ -29,31 +29,31 @@ namespace GreenLeaf4._1.Models
 
         public int MonitorID
         {
-            get { return _monitorID; }
+            get => _monitorID;
             set { _monitorID = value; OnPropertyChanged(nameof(MonitorID)); }
         }
 
         public string Name
         {
-            get { return _name; }
+            get => _name;
             set { _name = value; OnPropertyChanged(nameof(Name)); }
         }
 
         public string Particle
         {
-            get { return _particle; }
+            get => _particle;
             set { _particle = value; OnPropertyChanged(nameof(Particle)); }
         }
 
         public string Equipment
         {
-            get { return _equipment; }
+            get => _equipment;
             set { _equipment = value; OnPropertyChanged(nameof(Equipment)); }
         }
 
         public int StationID
         {
-            get { return _stationID; }
+            get => _stationID;
             set { _stationID = value; OnPropertyChanged(nameof(StationID)); }
         }
 

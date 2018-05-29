@@ -11,12 +11,12 @@ namespace GreenLeaf4._1.Models
     {
         private int _taskID;
         private string _description;
-        private string _date;
+        private DateTime _date;
         private string _status;
         private int _empID;
         private int _stationID;
 
-        public CTask(int taskID, string description, string date, string status, int empID, int stationID)
+        public CTask(int taskID, string description, DateTime date, string status, int empID, int stationID)
         {
             _taskID = taskID;
             _description = description;
@@ -40,9 +40,10 @@ namespace GreenLeaf4._1.Models
             set { _description = value; OnPropertyChanged(nameof(Description)); }
         }
 
-        public string Date
+        public DateTime Date
         {
-            get => _date;
+            get => DateTimeConverter.DateConverter(_date.Year, _date.Month, _date.Day, _date.Hour, _date.Minute,
+                _date.Second);
             set { _date = value; OnPropertyChanged(nameof(Date)); }
         }
 

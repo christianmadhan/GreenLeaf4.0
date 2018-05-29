@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using GreenLeaf4._1.Helpers;
 using GreenLeaf4._1.Models;
 using GreenLeaf4._1.Services;
 using Newtonsoft.Json;
@@ -26,7 +27,7 @@ namespace GreenLeaf4._1.Global
             try
             {
                 var data = WebApiService.GetDataFromWeb("api/Tasks");
-                ListOfTasks = JsonConvert.DeserializeObject<ObservableCollection<CTask>>(data);
+                ListOfTasks = Json.TransformData(data);
             }
             catch (Exception e)
             {

@@ -53,7 +53,7 @@ namespace GreenLeaf4._1.Global
             return _Task.Status;
         }
 
-        public string GetDate()
+        public DateTime GetDate()
         {
             return _Task.Date;
         }

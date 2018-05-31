@@ -32,7 +32,7 @@ namespace GreenLeaf4._1.ViewModels
 
         // New Task
         public string Description { get; set; }
-        public DateTimeOffset Date { get; set; }
+        public DateTime Date { get; set; }
         public string Status { get; set; }
         public Employee SelectedEmployeeComboBox { get; set; }
 
@@ -153,7 +153,7 @@ namespace GreenLeaf4._1.ViewModels
             tasklist.GetTaskList().GroupBy(x => x.TaskID);
             newTask.TaskID = tasklist.GetTaskList().Last().TaskID + 1;
             newTask.Description = Description;
-            newTask.Date = Date.Date.ToShortDateString();
+            newTask.Date = Date;
             newTask.Status = Status;
             newTask.EmpID = SelectedEmployeeComboBox.EmpID;
             newTask.StationID = station.GetStationID();
@@ -177,7 +177,7 @@ namespace GreenLeaf4._1.ViewModels
 
             monitorlist.GetMonitorList().Add(newMonitor);
 
-            MessageDialog msg = new MessageDialog("The Monitor " + MonitorName + " has been added to the Station");
+            MessageDialog msg = new MessageDialog("The Monitor " + newMonitor.Name + " has been added to the Station");
             await msg.ShowAsync();
             await WebApiService.PostTMECS("api/Monitors", newMonitor);
             Window.Current.Close();

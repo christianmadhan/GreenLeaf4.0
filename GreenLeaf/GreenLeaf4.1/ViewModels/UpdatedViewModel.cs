@@ -49,15 +49,15 @@ namespace GreenLeaf4._1.ViewModels
                 newTask.EmpID = Instances.GetEmpID();
                 newTask.StationID = Instances.GetStationID();
 
-                //Instances.SetTask(newTask);
+                Instances.SetTask(newTask);
 
-                //Instances.GetStatus();
+                Instances.GetStatus();
 
-               var item = listOfTask.GetTaskList().First(x => x.TaskID == Instances.GetTaskID());
+                var item = listOfTask.GetTaskList().First(x => x.TaskID == Instances.GetTaskID());
                 listOfTask.GetTaskList().Remove(item);
                 listOfTask.GetTaskList().Add(newTask);
 
-               await  WebApiService.DeleteObjectAsync("api/Tasks/" + item.TaskID);
+                await WebApiService.DeleteObjectAsync("api/Tasks/" + item.TaskID);
                 await WebApiService.PostTMECS("api/Tasks", newTask);
 
                 MessageDialog msg = new MessageDialog("The Status had been Updated!");
@@ -69,7 +69,7 @@ namespace GreenLeaf4._1.ViewModels
                 Console.WriteLine(e);
                 throw;
             }
-            
+
         }
     }
 }

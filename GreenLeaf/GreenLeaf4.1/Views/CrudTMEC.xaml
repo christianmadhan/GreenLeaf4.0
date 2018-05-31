@@ -58,18 +58,18 @@
             </StackPanel>
             <StackPanel>
                 <TextBlock Text="Name" Foreground="White"  Margin="7,0,0,0"/>
-                <TextBox HorizontalAlignment="Left" Width="302" Margin="7,0,0,0"/>
+                <TextBox HorizontalAlignment="Left" Width="302" Margin="7,0,0,0" Text="{Binding MonitorName, Mode=TwoWay}"/>
             </StackPanel>
             <StackPanel>
                 <TextBlock Text="Particle" Foreground="White"  Margin="7,0,0,0"/>
-                <TextBox HorizontalAlignment="Left" Width="302" Margin="7,0,0,0"/>
+                <TextBox HorizontalAlignment="Left" Width="302" Margin="7,0,0,0" Text="{Binding Particle, Mode=TwoWay}"/>
             </StackPanel>
             <StackPanel>
                 <TextBlock Text="Equipment" Foreground="White" Margin="7,0,0,0"/>
-                <TextBox HorizontalAlignment="Left" Width="302" Margin="7,0,0,0"/>
+                <TextBox HorizontalAlignment="Left" Width="302" Margin="7,0,0,0" Text="{Binding Equipment, Mode=TwoWay}"/>
             </StackPanel>
             <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal" Margin="0,20,0,0">
-                <Button Height="30" Width="130" Margin="0,0,40,0" Content="Create Monitor" Foreground="White"/>
+                <Button Height="30" Width="130" Margin="0,0,40,0" Content="Create Monitor" Foreground="White" Command="{Binding CreateMonitor}"/>
             </StackPanel>
         </StackPanel>
         <StackPanel Grid.Column="2" Grid.RowSpan="2" Margin="0,0,10,0"  Background="ForestGreen"  Height="320" CornerRadius="3,3,3,3" Width="400">

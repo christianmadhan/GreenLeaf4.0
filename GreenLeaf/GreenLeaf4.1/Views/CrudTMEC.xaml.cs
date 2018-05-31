@@ -26,10 +26,5 @@ namespace GreenLeaf4._1.Views
         {
             this.InitializeComponent();
         }
-
-        private void TextBox_TextChanged()
-        {
-
-        }
     }
 }

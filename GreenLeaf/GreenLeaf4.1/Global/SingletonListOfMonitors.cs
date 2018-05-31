@@ -21,12 +21,12 @@ namespace GreenLeaf4._1.Global
             LoadMonitorList();
         }
 
-        public static void LoadMonitorList()
+        public  static void LoadMonitorList()
         {
             try
             {
-                var data = WebApiService.GetDataFromWeb("api/Monitors");
-                ListOfMonitors = JsonConvert.DeserializeObject<ObservableCollection<Monitor>>(data);
+                var data =  WebApiService.GetDataFromWeb("api/Monitors");
+                 ListOfMonitors = JsonConvert.DeserializeObject<ObservableCollection<Monitor>>(data);
             }
             catch (Exception e)
             {

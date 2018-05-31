@@ -18,7 +18,7 @@ namespace GreenLeaf4._1.Global
 
         private SingletonListOfEmployees()
         {
-            LoadEmployeeList();
+           LoadEmployeeList();
         }
 
         public static void LoadEmployeeList()

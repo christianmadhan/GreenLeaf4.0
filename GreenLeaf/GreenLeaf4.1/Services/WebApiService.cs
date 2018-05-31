@@ -11,7 +11,7 @@ namespace GreenLeaf4._1.Services
 {
     public class WebApiService
     {
-        private const string ServerUrl = "https://wagreen.azurewebsites.net/";
+        private const string ServerUrl = "http://localhost:54081/";
 
         public static string GetDataFromWeb(string url)
         {

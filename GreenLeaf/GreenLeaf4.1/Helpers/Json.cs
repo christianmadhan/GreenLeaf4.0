@@ -1,11 +1,15 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
-
+using GreenLeaf4._1.Models;
 using Newtonsoft.Json;
 
 namespace GreenLeaf4._1.Helpers
 {
-    public static class Json
+   public static class Json
     {
         public static async Task<T> ToObjectAsync<T>(string value)
         {
@@ -21,6 +25,11 @@ namespace GreenLeaf4._1.Helpers
             {
                 return JsonConvert.SerializeObject(value);
             });
+        }
+
+        public static ObservableCollection<CTask> TransformData(string data)
+        {
+           return JsonConvert.DeserializeObject<ObservableCollection<CTask>>(data);
         }
     }
 }

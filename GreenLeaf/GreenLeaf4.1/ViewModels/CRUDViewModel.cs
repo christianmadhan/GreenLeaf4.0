@@ -177,7 +177,7 @@ namespace GreenLeaf4._1.ViewModels
 
             monitorlist.GetMonitorList().Add(newMonitor);
 
-            MessageDialog msg = new MessageDialog("The Monitor " + MonitorName + " has been added to the Station");
+            MessageDialog msg = new MessageDialog("The Monitor " + newMonitor.Name + " has been added to the Station");
             await msg.ShowAsync();
             await WebApiService.PostTMECS("api/Monitors", newMonitor);
             Window.Current.Close();

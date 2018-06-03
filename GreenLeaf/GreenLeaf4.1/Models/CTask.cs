@@ -42,8 +42,7 @@ namespace GreenLeaf4._1.Models
 
         public DateTime Date
         {
-            get => DateTimeConverter.DateConverter(_date.Year, _date.Month, _date.Day, _date.Hour, _date.Minute,
-                _date.Second);
+            get => DateTimeConverter.DateConverter(_date.Year, _date.Month, _date.Day);
             set { _date = value; OnPropertyChanged(nameof(Date)); }
         }
 

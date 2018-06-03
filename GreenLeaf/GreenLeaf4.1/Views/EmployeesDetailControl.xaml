@@ -29,9 +29,7 @@
                 <TextBlock Text="{x:Bind MasterMenuItem.Lastname, Mode=OneWay}" Style="{StaticResource BodyTextBlockStyle}" />
                 <TextBlock Text="Username" Style="{StaticResource SubtitleTextBlockStyle}" Margin="0,8,0,0"/>
                 <TextBlock Text="{x:Bind MasterMenuItem.Username, Mode=OneWay}" Style="{StaticResource BodyTextBlockStyle}" />
-                <TextBlock Text="Password" Style="{StaticResource SubtitleTextBlockStyle}" Margin="0,8,0,0"/>
-                <TextBlock Text="{x:Bind MasterMenuItem.Password, Mode=OneWay}" Style="{StaticResource BodyTextBlockStyle}" />
-               <TextBlock Text="Task List: "></TextBlock>
+                <TextBlock Text="Task List: " Style="{StaticResource BodyTextBlockStyle}"/>
                 <StackPanel Margin="0,10,0,0">
                     <ListView  
                     ItemsSource="{x:Bind TaskSample}"

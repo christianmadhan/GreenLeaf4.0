@@ -7,8 +7,9 @@ using Windows.Storage.Streams;
 
 namespace GreenLeaf4._1.Helpers
 {
-    // Use these extension methods to store and retrieve local and roaming app data
-    // More details regarding storing and retrieving app data at https://docs.microsoft.com/windows/uwp/app-settings/store-and-retrieve-app-data
+    // This File was meant to be used if we wanted to save our data locally.
+    // Since all of our data is stored in the class, this file isnt used.
+    // It's still here, because we want our app to be scalable, so developers in the future can make use of it.
     public static class SettingsStorageExtensions
     {
         private const string FileExtension = ".json";

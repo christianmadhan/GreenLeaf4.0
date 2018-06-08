@@ -6,6 +6,11 @@ namespace GreenLeaf4._1.Helpers
 {
     public class Observable : INotifyPropertyChanged
     {
+
+        /* We need the INotifyChanged Property classes to update the model when we input
+         * some values into the view. In this way we can just inherit the INotifyPropertyChanged class
+         * in the classes that we want and use it on the Set method.
+         */
         public event PropertyChangedEventHandler PropertyChanged;
 
         protected void Set<T>(ref T storage, T value, [CallerMemberName]string propertyName = null)

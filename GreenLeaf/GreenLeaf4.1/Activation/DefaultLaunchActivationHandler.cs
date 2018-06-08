@@ -7,6 +7,9 @@ using Windows.ApplicationModel.Activation;
 
 namespace GreenLeaf4._1.Activation
 {
+
+    // Not Sure what this does yet.
+    // But we are using it :D
     internal class DefaultLaunchActivationHandler : ActivationHandler<LaunchActivatedEventArgs>
     {
         private readonly Type _navElement;

@@ -9,6 +9,13 @@ using Newtonsoft.Json;
 
 namespace GreenLeaf4._1.Helpers
 {
+
+    /*
+        When we retrived Data from the web its in XML. We want that
+        To be converted to JSON format. Because we are using that converter a lot
+        It makes more sense to have a specific file which we then call and then use
+        the method inside that file.
+     */
    public static class Json
     {
         public static async Task<T> ToObjectAsync<T>(string value)

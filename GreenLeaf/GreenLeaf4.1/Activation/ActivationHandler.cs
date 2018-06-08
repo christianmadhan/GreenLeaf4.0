@@ -3,7 +3,8 @@ using System.Threading.Tasks;
 
 namespace GreenLeaf4._1.Activation
 {
-    // For more information on application activation see https://github.com/Microsoft/WindowsTemplateStudio/blob/master/docs/activation.md
+    // Not Sure what this does yet.
+    // But we are using it :D
     internal abstract class ActivationHandler
     {
         public abstract bool CanHandle(object args);

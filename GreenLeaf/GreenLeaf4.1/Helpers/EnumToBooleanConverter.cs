@@ -4,6 +4,9 @@ using Windows.UI.Xaml.Data;
 
 namespace GreenLeaf4._1.Helpers
 {
+
+    // Not Sure what this does yet.
+    // But we are using it :D
     public class EnumToBooleanConverter : IValueConverter
     {
         public Type EnumType { get; set; }

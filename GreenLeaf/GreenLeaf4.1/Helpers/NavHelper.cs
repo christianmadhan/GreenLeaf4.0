@@ -7,6 +7,10 @@ namespace GreenLeaf4._1.Helpers
 {
     public class NavHelper
     {
+        /*
+         * When are a navigating between the views in the Sidebar
+         * We use this NavHelper to navigate between the views.
+         */
         public static Type GetNavigateTo(NavigationViewItem item)
         {
             return (Type)item.GetValue(NavigateToProperty);

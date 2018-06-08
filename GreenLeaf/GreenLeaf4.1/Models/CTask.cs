@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -7,8 +8,16 @@ using GreenLeaf4._1.Helpers;
 
 namespace GreenLeaf4._1.Models
 {
+    /* Inherits the INotifyChanged Property Class
+ * This makes sure that the model get updated when we make changes
+ * in the view
+*/
+
+   // Also notice that the class is named CTask and not just Task.
+   // Thats because there is a class called Task in C# and its bad design to class this class Task.
     public class CTask : Observable
     {
+        //Private properties
         private int _taskID;
         private string _description;
         private DateTime _date;
@@ -16,6 +25,8 @@ namespace GreenLeaf4._1.Models
         private int _empID;
         private int _stationID;
 
+       /*Constructer for the class, its important that the properties of the object
+         * Is the same as the fields in the database. */
         public CTask(int taskID, string description, DateTime date, string status, int empID, int stationID)
         {
             _taskID = taskID;
@@ -26,8 +37,13 @@ namespace GreenLeaf4._1.Models
             _stationID = stationID;
         }
 
+        //Empty Constructer for singleton 
         public CTask() { }
 
+
+        //-----------------------------------------------------------------------------------
+        // Get and set Methods
+        // On the set method we use the OnPropertyChanged method 
         public int TaskID
         {
             get { return _taskID; }
@@ -42,7 +58,7 @@ namespace GreenLeaf4._1.Models
 
         public DateTime Date
         {
-            get => DateTimeConverter.DateConverter(_date.Year, _date.Month, _date.Day);
+            get => _date.Date;
             set { _date = value; OnPropertyChanged(nameof(Date)); }
         }
 

@@ -3,6 +3,9 @@ using System.Collections.Concurrent;
 
 namespace GreenLeaf4._1.Helpers
 {
+
+   // Not sure if this is used. Dont think it is since we already have the singleton classes
+   // It was generated in the template studio and im not sure how to implement it.
     internal static class Singleton<T>
         where T : new()
     {

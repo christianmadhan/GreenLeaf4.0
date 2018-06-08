@@ -9,6 +9,11 @@ namespace GreenLeaf4._1.Global
 {
   public  class SingletonEmployee 
   {
+    /* Global  Employee Object. Whent the user log into the system
+     * The account helper class (The class that manage login) goes through the Employee List
+     * Check to see that the credential match, if they do they set the employee who is log in to the global employee.
+     * There can only be one global instance of this class.
+     */
       public static Employee _Employee;
 
         private static SingletonEmployee Instance { get; set; }

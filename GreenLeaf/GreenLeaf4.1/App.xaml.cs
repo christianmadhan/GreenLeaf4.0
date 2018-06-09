@@ -21,13 +21,6 @@ namespace GreenLeaf4._1
         public App()
         {
             InitializeComponent();
-
-            SingletonListOfComments CommentSingle = SingletonListOfComments.GetInstance();
-            SingletonListOfEmployees EmployeeSingle = SingletonListOfEmployees.GetInstance();
-            SingletonListOfMonitors MonitorSingle = SingletonListOfMonitors.GetInstance();
-            SingletonListOfStations StationSingle = SingletonListOfStations.GetInstance();
-            SingletonListOfTasks TaskSingle = SingletonListOfTasks.GetInstance();
-
             //_activationService = new Lazy<ActivationService>(CreateActivationService);
             _activationService = new Lazy<ActivationService>(CreateLogin);
         }

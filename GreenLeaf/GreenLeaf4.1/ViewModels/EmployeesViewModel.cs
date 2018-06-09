@@ -13,6 +13,7 @@ namespace GreenLeaf4._1.ViewModels
 {
     public class EmployeesViewModel : Observable
     {
+        private SingletonListOfEmployees Instance = SingletonListOfEmployees.GetInstance();
         private Employee _selected;
 
         public Employee Selected
@@ -32,9 +33,8 @@ namespace GreenLeaf4._1.ViewModels
         {
             EmployeesSample.Clear();
 
-            var data = await EmployeeDataService.GetEmployeeModelDataAsync();
 
-            foreach (var emp in data)
+            foreach (var emp in Instance.GetEmployeeList())
             {
                 EmployeesSample.Add(emp);
             }

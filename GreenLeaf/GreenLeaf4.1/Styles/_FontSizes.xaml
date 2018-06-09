@@ -1,4 +1,7 @@
-﻿<ResourceDictionary
+﻿
+ <!-- We can set custom style in seperate folders and then call them inside the xaml code -->
+<!-- Im not sure how this work yet, so i havent added my own style yet, because i diddnt want to mess this up -->
+<ResourceDictionary
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 

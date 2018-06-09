@@ -27,8 +27,6 @@ namespace GreenLeaf4._1.ViewModels
 
         public RelayCommand GoToCrudPage { get; set; }
 
-        ObservableCollection<CTask> NewTask = new ObservableCollection<CTask>();
-
         public Station Selected
         {
             get { return _selected; }

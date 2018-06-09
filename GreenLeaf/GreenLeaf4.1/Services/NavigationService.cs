@@ -9,6 +9,9 @@ namespace GreenLeaf4._1.Services
 {
     public static class NavigationService
     {
+        /* This class helps us navigate between view in our folders.
+         Depending on which fram that is open, the program will handle the different user actions.
+         */
         public static event NavigatedEventHandler Navigated;
 
         public static event NavigationFailedEventHandler NavigationFailed;

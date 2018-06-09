@@ -13,7 +13,7 @@ using Windows.UI.Xaml.Navigation;
 
 namespace GreenLeaf4._1.Services
 {
-    // For more information on application activation see https://github.com/Microsoft/WindowsTemplateStudio/blob/master/docs/activation.md
+  // Not sure what this file does yet.
     internal class ActivationService
     {
         private readonly App _app;

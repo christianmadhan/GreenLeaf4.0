@@ -136,12 +136,7 @@
     <Compile Include="Properties\Annotations.cs" />
     <Compile Include="Services\ActivationService.cs" />
     <Compile Include="Activation\DefaultLaunchActivationHandler.cs" />
-    <Compile Include="Services\CommentDataServicecs.cs" />
-    <Compile Include="Services\EmployeeDataService.cs" />
-    <Compile Include="Services\MonitorDataService.cs" />
     <Compile Include="Services\NavigationService.cs" />
-    <Compile Include="Services\StationDataService.cs" />
-    <Compile Include="Services\TaskDataService.cs" />
     <Compile Include="Services\ThemeSelectorService.cs" />
     <Compile Include="Services\WebApiService.cs" />
     <Compile Include="Utils\AccountHelper.cs" />

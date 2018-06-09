@@ -18,10 +18,19 @@ namespace GreenLeaf4._1.Views
 {
     public sealed partial class EmployeesDetailControl : UserControl
     {
+        // When the user select a task in the tasklist we set that task to this task.
         private CTask _selected;
+
+        //This is a local tasklist that is empty.
         public ObservableCollection<CTask> TaskSample = new ObservableCollection<CTask>();
+
+        //We need some global datas such as the task list and the employee list.
         private readonly SingletonListOfTasks singletonTask = SingletonListOfTasks.GetInstance();
         private readonly SingletonEmployee singleEmp = SingletonEmployee.GetInstance();
+
+
+
+        // We set the global task to the selected that so that we can update the status of the task
         private readonly SingletonTask singleTask = SingletonTask.GetInstance();
 
         public event PropertyChangedEventHandler PropertyChanged;

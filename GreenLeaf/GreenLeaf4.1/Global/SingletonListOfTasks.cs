@@ -14,16 +14,19 @@ namespace GreenLeaf4._1.Global
     public class SingletonListOfTasks
     {
         /* Global List. This class is accessable in our whole application and may only be set once
-* but called as many times as we want. This also why it may seems slow when we navigate between pages
-* because we are calling and retrieving data from our web api which is getting the data from a database
-* on Azure.
-*/
+          * but called as many times as we want. This also why it may seems slow when we navigate between pages
+          * because we are calling and retrieving data from our web api which is getting the data from a database
+        *  on Azure.
+            */
         public static ObservableCollection<CTask> ListOfTasks;
 
         private static SingletonListOfTasks Instance { get; set; }
 
         private SingletonListOfTasks()
         {
+            /* We call the Web api service class in our contructer because we want our data immediatly.
+            * The data needs to be deserialize so that it can be displayed in the observablecollection.
+                */
             LoadTaskList();
         }
 

@@ -8,6 +8,7 @@ using Windows.UI.Xaml;
 
 namespace GreenLeaf4._1.Services
 {
+    // This class is used for the setting page when you pick a new theme.
     public static class ThemeSelectorService
     {
         private const string SettingsKey = "AppBackgroundRequestedTheme";
